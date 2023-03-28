@@ -1,4 +1,4 @@
-../.idea
-web_31/venv
+.idea
+venv
 *.sqlite3
 __pycache__
