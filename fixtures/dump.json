@@ -1,0 +1,101 @@
+[
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "description": "adsasasads",
+      "image": "",
+      "author": 1,
+      "likes": -1,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+      "description": "ghj",
+      "image": "",
+      "author": 1,
+      "likes": -2,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+      "description": "ghjgh",
+      "image": "",
+      "author": 2,
+      "likes": 2,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+      "description": "adsadsa",
+      "image": "",
+      "author": 1,
+      "likes": 3,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 6,
+    "fields": {
+      "description": "adsadsa",
+      "image": "",
+      "author": 1,
+      "likes": 0,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 7,
+    "fields": {
+      "description": "fsfdsd",
+      "image": "",
+      "author": 1,
+      "likes": 0,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 8,
+    "fields": {
+      "description": "asd",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1.jpg",
+      "author": 1,
+      "likes": -1,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 9,
+    "fields": {
+      "description": "asdas",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_tTUN9xX.jpg",
+      "author": 3,
+      "likes": 0,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 10,
+    "fields": {
+      "description": "fsdsdsf",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_71cU7Fa.jpg",
+      "author": 3,
+      "likes": 0,
+      "comment": 0
+    }
+  }
+]

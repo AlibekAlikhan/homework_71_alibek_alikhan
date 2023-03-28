@@ -1,0 +1,85 @@
+[
+  {
+    "model": "accounts.account",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$kwlpp1GTcNUPN720x37xvy$Y7/Ma24q+qRlzJaiHAQnrO2tmogmjkL0+JA99e3jJ+8=",
+      "last_login": "2023-03-27T15:05:24.639Z",
+      "is_superuser": true,
+      "username": "aa@aa.com",
+      "first_name": "Ali",
+      "last_name": "Aliev3",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-03-23T16:18:08.786Z",
+      "email": "aa@aa.com",
+      "avatar": "user_pic/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_IUBD7eG.jpg",
+      "detail_info": null,
+      "birth_date": "2005-07-12",
+      "groups": [],
+      "user_permissions": [],
+      "liked_posts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "subscriptions": [],
+      "commented_posts": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$eQkdAN7JDoYVWuhtAxcFYc$9oVvaxMberfIiZSJZgVmGVLjRwbLsTrCIl3Iav7tpZQ=",
+      "last_login": "2023-03-27T14:32:51.900Z",
+      "is_superuser": false,
+      "username": "gg@gg.com",
+      "first_name": "asd",
+      "last_name": "asd",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-27T14:32:51.545Z",
+      "email": "gg@gg.com",
+      "avatar": "",
+      "detail_info": "dsfsdsd",
+      "birth_date": "2005-07-12",
+      "groups": [],
+      "user_permissions": [],
+      "liked_posts": [],
+      "subscriptions": [],
+      "commented_posts": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$zLL47S66xgp2FzG1Kmiz3k$o7T3XiDBdgGAXeUaF6XVzAEME5dOb5wQ+EnSxLZAU9c=",
+      "last_login": "2023-03-28T10:36:53.021Z",
+      "is_superuser": false,
+      "username": "adsa",
+      "first_name": "fsdsd",
+      "last_name": "fgffgddd",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-28T10:36:52.583Z",
+      "email": "kk@kk.com",
+      "avatar": "user_pic/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_EYCpb7Y.jpg",
+      "detail_info": "dfgdfdfg",
+      "birth_date": "2005-07-12",
+      "groups": [],
+      "user_permissions": [],
+      "liked_posts": [
+        5
+      ],
+      "subscriptions": [
+        1
+      ],
+      "commented_posts": []
+    }
+  }
+]
