@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <a href="{% url 'profile' user.pk %}" class="btn btn-primary">Profile</a>
+        {% include 'partial/search.html' %}
+        {% for pos in posts_view %}
+            <img src="{{ pos.avatar }}" alt="">
+            <a href=" {% url 'profile' pos.pk %}"><p> {{ pos.username }}</p></a>
+            <p>{{ pos.first_name }}</p>
+            <p> {{ pos.last_name }}</p>
+            <p>{{ pos.email }}</p>
+            <div class="card" style="margin-top: 25px">
+                {% if pos.image %}
+                    <img src="{{ pos.image.url }}" alt="">
+                {% else %}
+                    <img src=".." alt="..">
+                {% endif %}
+                <h5 class="card-header">{{ pos.description }}</h5>
+                <div class="card-body">
+                    <h5 class="card-title">{{ pos.author }}</h5>
+                    <a href="{% url 'like' pos.pk %}" class="btn btn-primary">Like {{ pos.likes }}</a>
+                 <a href="#" class="btn btn-primary">Comments {{ pos.comment }}</a>
+                    <form action="{% url 'to_comment' pos.pk %}" method="post">
+                        {% load django_bootstrap5 %}
+                        {% csrf_token %}
+                        {% bootstrap_form favorit_form %}
+                        <h1><input type="submit" class="btn btn-primary" value="Comment add"></h1>
+                    </form>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% if is_paginated %}
+            {% include 'partial/paginate.html' %}
+        {% endif %}
+    {% else %}
+        <a class="btn btn-primary" href="{% url 'login' %}" role="button" style="margin-right: 20px">Войти</a>
+        <a class="btn btn-primary" href="{% url 'register' %}" role="button"
+           style="margin-right: 20px">Зарегистрироваться</a>
+    {% endif %}
+{% endblock %}

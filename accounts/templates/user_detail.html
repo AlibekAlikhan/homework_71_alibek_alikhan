@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Пользователь{% endblock %}
+
+{% block menu %}
+    <li><a href=" {% url 'change' user_obj.pk %}" class="btn btn-primary">Редактировать</a></li>
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Выйти">
+        </form>
+    {% else %}
+        <a class="btn btn-primary" href="{% url 'login' %}" role="button" style="margin-right: 20px">Войти</a>
+        <a class="btn btn-primary" href="{% url 'register' %}" role="button" style="margin-right: 20px">Зарегистрироваться</a>
+    {% endif %}
+    <h1>Личная страница пользователя {{ user_obj.get_full_name|default:user_obj.username }}</h1>
+    <img class="avatar" src="{{ user_obj.avatar.url }}" width="250" height="250" alt="user picture">
+    {% if request.user != user_obj %}
+        <a href="{% url 'subscriptions' user_obj.pk %}" class="btn btn-primary">Подписаться</a>
+        <a href="{% url 'subscriptions' user_obj.pk %}" class="btn btn-primary">Отписаться</a>
+    {% endif %}
+    <p>Имя пользователя: {{ user_obj.username }}</p>
+    <p>Имя: {{ user_obj.first_name }}</p>
+    <p>Подписки: {{ user_obj.subscriptions.all.count }}</p>
+    <p>Подписчики: {{ user_obj.subscribers.all.count }}</p>
+    <p>Фамилия: {{ user_obj.last_name }}</p>
+    <p>Дата рождения: {{ user_obj.profile.birth_date|date:'d.m.Y' }}</p>
+    <p>Почта: {{ user_obj.email }}</p>
+
+
+    {% include "partial/article_list.html" %}
+
+{% endblock %}

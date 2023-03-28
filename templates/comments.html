@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    {% if user.is_authenticated %}
+        {% for c in comment %}
+            <form action="{% url 'detail_comment' c.post %}" method="post">
+                {% load django_bootstrap5 %}
+                {% csrf_token %}
+                {% bootstrap_form favorit_form %}
+                <h1><input type="submit" class="btn btn-primary" value="Comment add"></h1>
+            </form>
+        {% endfor %}
+        {% for pj in comment %}
+            <div class="card" style="margin-top: 25px">
+                <h5 class="card-title"> Пользователь {{ pj.users }}</h5>
+                <h5 class="card-title">{{ pj.text }}</h5>
+            </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Detail{% endblock %}
+{% block navbar %}
+    <a class="btn btn-primary" href="{% url 'index' %}" role="button">Home</a>
+{% endblock %}
+{% block content %}
+    <div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {%include 'partial/posts_form.html' with button_text='Создать'%}
+    </form>
+
+
+{% endblock %}
