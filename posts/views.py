@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.utils.http import urlencode
-from django.views.generic import ListView, CreateView, FormView, TemplateView
+from django.views.generic import ListView, CreateView, FormView, TemplateView, DetailView
 
 from accounts.models import Account
 from posts.forms import SearchForm, PostForm, CommentForm
@@ -27,7 +27,7 @@ class PostsView(ListView):
         context['form'] = self.form
         if self.search_value:
             context['query'] = urlencode({'search': self.search_value})
-        context['favorit_form'] = CommentForm
+        context['favorit_form'] = CommentForm()
         return context
 
     def get_queryset(self):
@@ -71,16 +71,22 @@ class PostsProfileView(ListView):
 
 
 class CommentView(LoginRequiredMixin, CreateView):
+    form_class = CommentForm
 
     def post(self, request, *args, **kwargs):
         post = get_object_or_404(Post, pk=kwargs.get('pk'))
-        form = self.get_form_class()(request.POST)
+        form = CommentForm(request.POST)
         if form.is_valid():
             text = form.cleaned_data.get('text')
             user = request.user
             Comment.objects.create(author=user, text=text, post=post)
             user.commented_posts.add(post)
         return redirect('index')
+
+
+
+
+
 
 
 class LikeView(TemplateView):
