@@ -18,6 +18,12 @@ class Post(models.Model):
         self.likes -= 1
         self.save()
 
+    def plus_comment(self, using=None, keep_parents=False):
+        self.comment += 1
+        self.save()
+
+
+
 
 
 class Comment(models.Model):

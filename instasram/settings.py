@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     "posts",
     "accounts",
+    "rest_framework",
+    "rest_framework.authtoken",
+    "api"
 ]
 
 MIDDLEWARE = [
@@ -80,7 +83,7 @@ WSGI_APPLICATION = "instasram.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "instasram",
+        "NAME": "instagram_last_new",
         "USER": "postgres",
         "PASSWORD": "alikhan2005",
         "HOST": "localhost",
@@ -119,6 +122,17 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework.authentication.TokenAuthentication',
+
+    )
+
+}
 
 
 # Internationalization

@@ -12,7 +12,8 @@ class Account(AbstractUser):
         null=True,
         blank=True,
         upload_to='user_pic',
-        verbose_name='Аватар'
+        verbose_name='Аватар',
+        default="user_pic/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1.jpg"
     )
     detail_info = models.CharField(
         verbose_name='Описание_пользователя',

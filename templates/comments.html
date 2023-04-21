@@ -1,12 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    {% for article in posts_view %}
-             <div class="card" style="margin-top: 25px">
-                <div class="card-body">
-                    <h5 class="card-title">{{ article.text }}</h5>
-                </div>
+<div class="card" style="margin-top: 25px">
+       {% if posts.image %}
+    <img src="{{ posts.image.url }}"  alt="">
+    {% else %}
+    <img src=".." alt="..">
+    {% endif %}
+     <div class="card-body">
+    <h5>{{ posts.description }}</h5>
+     </div>
+</div>
+{% for article in comment %}
+<div class="card" style="margin-top: 25px">
+    <div class="card-body">
+        <h5 class="card-title">{{ article.text }}</h5>
+    </div>
 
-            </div>
-        {% endfor %}
+</div>
+{% endfor %}
 {% endblock %}

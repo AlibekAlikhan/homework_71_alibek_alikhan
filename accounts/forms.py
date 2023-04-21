@@ -7,7 +7,7 @@ from posts.models import Post
 
 
 class LoginForm(forms.Form):
-    email = forms.CharField(required=True, label='Логин')
+    email = forms.CharField(required=True, label='Email')
     password = forms.CharField(required=True, label='Пароль', widget=forms.PasswordInput)
 
 
@@ -45,7 +45,7 @@ class UserChangeForm(forms.ModelForm):
 class ProfileChangeForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ("description", "image", "author")
+        fields = ("description", "image")
 
 
 class CommentForm(forms.ModelForm):

@@ -1,0 +1,428 @@
+[
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "description": "dfgdfgdfsdfs dffghfgdsfdaddfdf fhjghfdgsasgh,hj ssa",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_j7H7dph.jpg",
+      "author": 1,
+      "likes": 3,
+      "comment": 2
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "description": "kjhkhkjkjkjfghfgfgdfgs mhgjhdfgsdaddfghjgj fadssdfghkgjgfhfd sasjghgfdd",
+      "image": "posts/Диаграмма_без_названия.drawio.png",
+      "author": 1,
+      "likes": 2,
+      "comment": 2
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+      "description": "lklkjkghffd asasaaaaaaaaaaaaaaaaaaa aaaaaaaaa cc",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_6ocPIlt.jpg",
+      "author": 1,
+      "likes": 2,
+      "comment": 1
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+      "description": "fsdfsfdsdfffffffffffffffffffffffffffffffffffffff",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_xQCcduE.jpg",
+      "author": 2,
+      "likes": 2,
+      "comment": 2
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+      "description": "aaaaaaaaaaaaaaaaaaaaaaa vvvvvvvvvvvvvvvv",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_whZBv46.jpg",
+      "author": 2,
+      "likes": 2,
+      "comment": 1
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 6,
+    "fields": {
+      "description": "lklkjkghffd asasaaaaaaaaaaaaaaaaaaa aaaaaaaaa cc",
+      "image": "posts/1645335859_1-phonoteka-org-p-anime-fon-mafiya-1_p5Z6Gi6.jpg",
+      "author": 3,
+      "likes": 1,
+      "comment": 0
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 1,
+    "fields": {
+      "author": 2,
+      "post": 1,
+      "text": "dfsdsdsd"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 2,
+    "fields": {
+      "author": 2,
+      "post": 2,
+      "text": "asdasdasa"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 3,
+    "fields": {
+      "author": 2,
+      "post": 2,
+      "text": "sdfsdsdsfd"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 4,
+    "fields": {
+      "author": 2,
+      "post": 3,
+      "text": "asasadsdadsa"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 5,
+    "fields": {
+      "author": 2,
+      "post": 4,
+      "text": "sdfssaasdasasdas"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 6,
+    "fields": {
+      "author": 2,
+      "post": 5,
+      "text": "asdadsdasad"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 7,
+    "fields": {
+      "author": 3,
+      "post": 4,
+      "text": "sdfsdsfds"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 8,
+    "fields": {
+      "author": 3,
+      "post": 1,
+      "text": "sdfsdsds"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 6,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 6,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 6,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 6,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 7,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 7,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 7,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 7,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Профиль",
+      "content_type": 8,
+      "codename": "add_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Профиль",
+      "content_type": 8,
+      "codename": "change_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Профиль",
+      "content_type": 8,
+      "codename": "delete_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Профиль",
+      "content_type": 8,
+      "codename": "view_account"
+    }
+  }
+]

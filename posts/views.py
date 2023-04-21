@@ -1,9 +1,13 @@
+import json
+
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.utils.http import urlencode
+
 from django.views.generic import ListView, CreateView, FormView, TemplateView, DetailView
 
 from accounts.models import Account
@@ -81,12 +85,20 @@ class CommentView(LoginRequiredMixin, CreateView):
             user = request.user
             Comment.objects.create(author=user, text=text, post=post)
             user.commented_posts.add(post)
+            post.plus_comment()
         return redirect('index')
 
 
+class CommentDetailView(TemplateView):
+    template_name = "comments.html"
+    model = Post
 
-
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        comment = Q(post=get_object_or_404(Post, pk=kwargs['pk']))
+        context['posts'] = get_object_or_404(Post, pk=kwargs['pk'])
+        context['comment'] = Comment.objects.filter(comment)
+        return context
 
 
 class LikeView(TemplateView):
@@ -101,6 +113,8 @@ class LikeView(TemplateView):
             user.liked_posts.remove(post)
             post.minus()
         return redirect('index')
+
+
 
 
 class SubscriptionsView(TemplateView):
